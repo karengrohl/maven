@@ -1,0 +1,30 @@
+<project name="FirstAnt" default="all">
+ <target name="make_dirs" description="Make some dirs">
+  <mkdir dir="build" /> 
+  <mkdir dir="build/classes" /> 
+  </target>
+ <target name="compile" description="compile java" depends="make_dirs">
+ <javac destdir="build/classes">
+  <src path="src/org/bsuir/gr573901/Churilina/laba6/proj1" />
+  </javac>
+  </target>
+ <target name="make_jar" description="make jar file" depends="compile">
+ <jar destfile="build/Churilina.jar">
+ <fileset dir="build/classes">
+  <include name="**/*.class"/>
+  </fileset>
+<manifest>
+  <attribute name="Main-class" value="org.bsuir.gr573901.Churilina.laba6.proj1.Main" />
+  </manifest>
+  </jar>
+  </target>
+
+    <target name ="clean" description="Clean up">
+        <echo>Cleaning</echo>
+        <delete dir = "build.xml"/>
+    </target>
+
+
+  <target name="all" description="Do the build" depends="all"/>
+
+  </project>
