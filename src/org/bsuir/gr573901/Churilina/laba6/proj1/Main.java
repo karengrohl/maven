@@ -5,10 +5,11 @@ import org.bsuir.gr573901.Churilina.laba6.proj1.util.PrintStr;
 
 public class Main {
 
-   
     public static void main(String[] args) 
     {
-        PrintStr.Print(args);     
+        int obj = 1;
+        PrintStr.Print(args);
+        System.out.println(obj);
     }
     
 }
